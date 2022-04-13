@@ -61,5 +61,7 @@ alias zshsrc='source ~/.zshrc'
 # vim
 alias vimcfg='vim ~/.vimrc'
 
-# df
+# disk
 alias df='df -h'
+alias du='du -h'
+
