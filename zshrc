@@ -42,7 +42,10 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #Fish
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#ubuntu
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#osx
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ## alias ##
 # ls
@@ -54,6 +57,9 @@ alias l='ls -CF'
 # zsh
 alias zshcfg='vim ~/.zshrc'
 alias zshsrc='source ~/.zshrc'
+
+# vim
+alias vimcfg='vim ~/.vimrc'
 
 # df
 alias df='df -h'
