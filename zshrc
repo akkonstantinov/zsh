@@ -43,9 +43,12 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #Fish
 #ubuntu
-#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#osx
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ $OSTYPE == *"darwin"* ]]; then
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [[ $OSTYPE == *"linux"* ]]; then
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+fi
 
 ## alias ##
 # ls
@@ -63,5 +66,5 @@ alias vimcfg='vim ~/.vimrc'
 
 # disk
 alias df='df -h'
-alias du='du -h'
+alias du='du -ach -d 1 | sort -h'
 
