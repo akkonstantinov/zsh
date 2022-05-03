@@ -9,8 +9,9 @@ autoload -U colors && colors
 autoload -U promptinit
 promptinit
 #prompt adam1
-export PROMPT='%n@%m:%~/> '
-export RPROMPT='%T'
+#export PROMPT='%n@%m:%~/> '
+export PROMPT="%{$fg_bold[green]%}%n@%m%{$fg_no_bold[green]%}:%~/%{$fg[red]%}>> %{$reset_color%}"
+export RPROMPT='%D %T'
 
 setopt histignorealldups sharehistory
 
