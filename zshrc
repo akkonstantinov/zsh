@@ -1,3 +1,8 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
 # Use modern completion system
 autoload -U compinit
 compinit
@@ -66,3 +71,9 @@ alias vimcfg='vim ~/.vimrc'
 # disk
 alias df='df -h'
 alias du='du -ach -d 1 | sort -h'
+
+#mba
+if [[ $HOST == "MBA"* ]]; then
+    alias sshbc='ssh -Y uu@bc'
+fi
+
